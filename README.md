@@ -1,22 +1,22 @@
-# JKNET
+# Luobo-net
 
 The bird config for my network
 
 ```
 # Internal Community:
-#  (207705,<999, 0)  Community for all my node
-#  (207705,<999, 1)  Community only for this node
-#  (207705,   1,*)   do not send to ibgp
-#  (207705,   2,*)   do not send to ebgp
-#  (207705,   3,*)   do not send to kernel
-#  (207705,   4,*)   send to kernel but mark unreachable
-#  (207705,   5,*)   send to kernel but mark blackhole
-#  (207705, 101,*)   allow bgp_local_perf
-#  (207705, 201,*)   transit routes
-#  (207705, 202,*)   ixp rs routes
-#  (207705, 203,*)   peer routes
-#  (207705, 204,*)   customer routes
-#  (207705, 209,*)   ibgp routes
+#  (201217,<999, 0)  Community for all my node
+#  (201217,<999, 1)  Community only for this node
+#  (201217,   1,*)   do not send to ibgp
+#  (201217,   2,*)   do not send to ebgp
+#  (201217,   3,*)   do not send to kernel
+#  (201217,   4,*)   send to kernel but mark unreachable
+#  (201217,   5,*)   send to kernel but mark blackhole
+#  (201217, 101,*)   allow bgp_local_perf
+#  (201217, 201,*)   transit routes
+#  (201217, 202,*)   ixp rs routes
+#  (201217, 203,*)   peer routes
+#  (201217, 204,*)   customer routes
+#  (201217, 209,*)   ibgp routes
 #
 # Control Community:
 #   Actions:
@@ -27,40 +27,40 @@ The bird config for my network
 #    ░ = 8   prepend 8 to target
 #   Action target selector:
 #    ░ = Action
-#    (207705,1░00,0)            Do action to everyone
-#    (207705,1░01,asn)          Don't do action to this asn
-#    (207705,1░02,asn)          Do action to this asn
-#    (207705,1░10,0)            Do action to every region
-#    (207705,1░11,region_code)  Don't do action to this region
-#    (207705,1░12,region_code)  Do action to this region
-#    (207705,1019,0)            Disable (asn,1010,0), (asn,1011,local_region) as default value
-#    (207705,1019,1)            Do not perform prepend to balance the path_len
-#    (207705,1░20,0)            Do action to every country
-#    (207705,1░21,country_code) Don't do action to this country
-#    (207705,1░22,country_code) Do action to this country
-#    (207705,1░30,1)            Do action to upstreams
-#    (207705,1░30,2)            Do action to ixp rs
-#    (207705,1░30,3)            Do action to peers
-#    (207705,1░30,4)            Do action to downstreams
-#    (207705,1░30,8)            Do action to route collectors
-#    (207705,1░40,1)            Do action to non-self upstream
-#    (207705,1░40,2)            Do action to non-self peers
-#    (207705,1░40,3)            Do action to non-self ixrs
+#    (201217,1░00,0)            Do action to everyone
+#    (201217,1░01,asn)          Don't do action to this asn
+#    (201217,1░02,asn)          Do action to this asn
+#    (201217,1░10,0)            Do action to every region
+#    (201217,1░11,region_code)  Don't do action to this region
+#    (201217,1░12,region_code)  Do action to this region
+#    (201217,1019,0)            Disable (asn,1010,0), (asn,1011,local_region) as default value
+#    (201217,1019,1)            Do not perform prepend to balance the path_len
+#    (201217,1░20,0)            Do action to every country
+#    (201217,1░21,country_code) Don't do action to this country
+#    (201217,1░22,country_code) Do action to this country
+#    (201217,1░30,1)            Do action to upstreams
+#    (201217,1░30,2)            Do action to ixp rs
+#    (201217,1░30,3)            Do action to peers
+#    (201217,1░30,4)            Do action to downstreams
+#    (201217,1░30,8)            Do action to route collectors
+#    (201217,1░40,1)            Do action to non-self upstream
+#    (201217,1░40,2)            Do action to non-self peers
+#    (201217,1░40,3)            Do action to non-self ixrs
 #   Examples:
 #     prepend 11 to AS6939: 
-#       (207705,1102,6939): prepend 1 to AS6939
-#       (207705,1202,6939): prepend 2 to AS6939
-#       (207705,1802,6939): prepend 8 to AS6939
+#       (201217,1102,6939): prepend 1 to AS6939
+#       (201217,1202,6939): prepend 2 to AS6939
+#       (201217,1802,6939): prepend 8 to AS6939
 #                   Total : 1+2+8 = 11
 #    prepend 2 to everyone but 6939:
-#      (207705,1200,0):     prepend 2 to everyone
-#      (207705,1201,6939):  don't do this action(prepend 2) to AS6939
+#      (201217,1200,0):     prepend 2 to everyone
+#      (201217,1201,6939):  don't do this action(prepend 2) to AS6939
 #    do not announce to anyone: 
-#      (207705,1000,0):     do not announce to everyone
+#      (201217,1000,0):     do not announce to everyone
 #
 # Informational Community
-#  (207705,10000,region_code)    Received from region
-#  (207705,10001,country_code)   Received from country
+#  (201217,10000,region_code)    Received from region
+#  (201217,10001,country_code)   Received from country
 # 
 # Region code:
 #  41: Europe
